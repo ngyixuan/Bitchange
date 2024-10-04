@@ -1,10 +1,10 @@
 import React from "react";
 
 interface CountdownCircleProps {
-  countdown: number; // Countdown value in seconds
-  totalDuration: number; // Total duration for the countdown in seconds
-  size?: number; // Size of the circle
-  strokeWidth?: number; // Width of the stroke
+  countdown: number;
+  totalDuration: number;
+  size?: number;
+  strokeWidth?: number;
 }
 
 const CountdownCircle: React.FC<CountdownCircleProps> = ({

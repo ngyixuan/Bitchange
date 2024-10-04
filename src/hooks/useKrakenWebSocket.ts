@@ -38,12 +38,12 @@ const useKrakenWebSocket = () => {
 
     socket.onclose = () => {
       console.log("WebSocket connection closed");
-      setTimeout(connectWebSocket, 5000); // Reconnect after 5 seconds
+      setTimeout(connectWebSocket, 5000);
     };
 
     socket.onclose = () => {
       console.log("WebSocket connection closed");
-      setTimeout(connectWebSocket, 5000); // Reconnect after 5 seconds
+      setTimeout(connectWebSocket, 5000);
     };
 
     return () => {
@@ -56,7 +56,7 @@ const useKrakenWebSocket = () => {
     return cleanup;
   }, [connectWebSocket]);
 
-  return { tickerData }; // Return the ticker data to be used in the component
+  return { tickerData };
 };
 
 export default useKrakenWebSocket;

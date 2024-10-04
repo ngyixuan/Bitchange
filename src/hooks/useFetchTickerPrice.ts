@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { GetTickerSchema } from "@/pages/api/types";
 
-const fetchPrices = async (): Promise<GetTickerSchema> => {
+const fetchTickerPrices = async (): Promise<GetTickerSchema> => {
   const { data } = await axios.get<GetTickerSchema>("/api/market");
   if (data.error.length > 0) {
     throw new Error(data.error[0]);
@@ -13,15 +13,15 @@ const fetchPrices = async (): Promise<GetTickerSchema> => {
 
 const usePriceFetcher = () => {
   const {
-    data: prices,
+    data: tickerData,
     isLoading,
     isError,
     error,
     refetch,
   } = useQuery({
-    queryKey: ["prices"],
-    queryFn: fetchPrices,
-    refetchInterval: false, // Disable automatic refetching
+    queryKey: ["tickerData"],
+    queryFn: fetchTickerPrices,
+    refetchInterval: false,
   });
 
   const [countdown, setCountdown] = useState(30);
@@ -30,17 +30,17 @@ const usePriceFetcher = () => {
     const interval = setInterval(() => {
       setCountdown((prev) => {
         if (prev === 0) {
-          refetch(); // Call refetch when countdown reaches 0
-          return 30; // Reset countdown
+          refetch();
+          return 30;
         }
         return prev - 1;
       });
-    }, 1000); // Update countdown every second
+    }, 1000);
 
-    return () => clearInterval(interval); // Cleanup the interval on unmount
+    return () => clearInterval(interval);
   }, [refetch]);
 
-  return { prices, isLoading, isError, error, countdown };
+  return { tickerData, isLoading, isError, error, countdown };
 };
 
 export default usePriceFetcher;

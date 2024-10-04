@@ -1,10 +1,10 @@
-interface AssetRowProps {
+interface TickerPairRowProps {
   pair: string;
   bid: string;
   ask: string;
 }
 
-const AssetRow: React.FC<AssetRowProps> = ({ pair, bid, ask }) => {
+const TickerPairRow: React.FC<TickerPairRowProps> = ({ pair, bid, ask }) => {
   return (
     <div className="relative group cursor-pointer">
       <div className="absolute -inset-[2px] rounded-lg bg-gradient-to-r from-[#85FFC4] to-[#BC85FF] opacity-0 group-hover:opacity-100 transition duration-300"></div>
@@ -18,4 +18,4 @@ const AssetRow: React.FC<AssetRowProps> = ({ pair, bid, ask }) => {
     </div>
   );
 };
-export default AssetRow;
+export default TickerPairRow;
