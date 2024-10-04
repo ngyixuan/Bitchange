@@ -12,14 +12,17 @@
     "@tanstack/react-query": "^5.59.0",
     "axios": "^1.7.7",
     "next": "14.2.14",
+    "pusher": "^5.2.0",
+    "pusher-js": "^8.4.0-rc2",
     "react": "^18",
     "react-dom": "^18",
-    "react-toastify": "^10.0.5"
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/ws": "^8.5.12",
     "eslint": "^8",
     "eslint-config-next": "14.2.14",
     "postcss": "^8",

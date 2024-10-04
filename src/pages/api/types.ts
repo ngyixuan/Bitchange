@@ -1,4 +1,4 @@
-interface GetTickerPairData {
+export interface GetTickerPairData {
   a: [string, string, string]; // Ask: [price, whole lot volume, lot volume]
   b: [string, string, string]; // Bid: [price, whole lot volume, lot volume]
   c: [string, string]; // Last trade closed: [price, lot volume]
