@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import TickerPairRow from "@/components/TickerPairRow";
-import useKrakenWebSocket from "@/hooks/useKrakenWebSocket";
-// import usePriceFetcher from "@/hooks/useFetchTickerPrice";
-// import CountdownCircle from "@/components/CountdownCircle";
+// import useKrakenWebSocket from "@/hooks/useKrakenWebSocket";
+import usePriceFetcher from "@/hooks/useFetchTickerPrice";
+import CountdownCircle from "@/components/CountdownCircle";
 function Page() {
-  // const { tickerData, countdown } = usePriceFetcher();
-  const { tickerData } = useKrakenWebSocket(); // Use the WebSocket hook
+  const { tickerData, countdown } = usePriceFetcher();
+  // const { tickerData } = useKrakenWebSocket(); // Use the WebSocket hook
 
   return (
     <div className="p-4">
@@ -18,10 +18,10 @@ function Page() {
             <div className="font-20 font-bold text-white text-4xl">
               Market Stats
             </div>
-            {/* <div className="flex row gap-4">
-              <div className="text-white">Update in {countdown}</div>
+            <div className="flex row gap-4">
+              <div className="text-white">Update in {countdown} seconds</div>
               <CountdownCircle countdown={countdown} totalDuration={30} />
-            </div> */}
+            </div>
           </div>
           <div className="flex flex-col gap-6 rounded-lg ">
             {tickerData &&
