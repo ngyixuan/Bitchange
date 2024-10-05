@@ -1,41 +1,42 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## What is Bitchange?
 
-## Getting Started
+This is a client-side platform built with React and Next.js that provides low-latency cryptocurrency price updates for BTC/USD and ETH/USD pairs.
 
-First, run the development server:
+## Technology Stack
+
+- **Next.js**: Server-side rendering and API integration for fetching and updating data.
+- **TailwindCss**: For quick and efficient styling.
+- **Axios**: Perform HTTP requests to the Kraken public API.
+- **Tanstack Query**: For state management and caching of API data.
+- **Websocket (Backup Method)**: Used for real-time data fetching from the Kraken API.
+
+## Key Feature:
+
+- **Low-latency Price Ticker Dashboard**: Displays real-time updates for BTC/USD and ETH/USD.
+- **Price Data Chart (coming soon)**: Visualize price trends over various timeframes (eg: 1 hour, 1 day, 1 week) .
+- **Multiple pair support (coming soon)**: Expand the platform to add more cryptocurrency pairs.
+- **Swap function (coming soon)**: Enables users to exchange cryptocurrencies based on live rates.
+
+## Installation
+
+Clone the Bitchange repository and install dependencies:
+
+```
+git clone https://github.com/ngyixuan/Bitchange.git
+cd Bitchange
+npm install
+```
+
+## Running the Application
+
+### To view the site, go to:
+
+```bash
+bitchange.vercel.app
+```
+
+### To start the local development server, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-=======
-# Bitchange
-Crypto Price Ticker
->>>>>>> 2e42ea3 (Initial commit)
