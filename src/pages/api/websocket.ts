@@ -1,6 +1,6 @@
 import Pusher from "pusher";
 import WebSocket from "ws";
-
+//Method2: Use websocket
 const pusher = new Pusher({
   appId: process.env.PUSHER_APP_ID as string,
   key: process.env.NEXT_PUBLIC_PUSHER_KEY as string,

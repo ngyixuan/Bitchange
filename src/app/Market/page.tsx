@@ -20,7 +20,7 @@ function Page() {
             </div>
             <div className="flex row gap-4">
               <div className="text-white">Update in {countdown} seconds</div>
-              <CountdownCircle countdown={countdown} totalDuration={30} />
+              <CountdownCircle countdown={countdown} totalDuration={10} />
             </div>
           </div>
           <div className="flex flex-col gap-6 rounded-lg ">
